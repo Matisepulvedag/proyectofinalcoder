@@ -9,11 +9,11 @@ import { InscripcionComponent } from './pages/inscripcion/inscripcion.component'
 const routes : Routes =[
   {
     path: '',
-    Component: DashboardLayoutComponent,
+    component: DashboardLayoutComponent,
     children:[
       {
-        path: "students"
-        Component: StudentsPageComponent,
+        path: "students",
+        component: StudentsPageComponent,
       },
       {
         path: 'curso',
