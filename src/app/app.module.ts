@@ -8,22 +8,24 @@ import { StudentsPageComponent } from './pages/students-page/students-page.compo
 import { MyMaterialModule } from './shared/modules/my-material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { StudentDialogComponent } from './shared/components/student-dialog/student-dialog.component';
+import { SidebarComponent } from './shared/layout/sidebar/sidebar.component'
+import { LayoutsModule } from './layouts/layouts.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    PageWrapperComponent,
-    StudentsPageComponent,
-    StudentDialogComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MyMaterialModule,
-    ReactiveFormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MyMaterialModule,
+        ReactiveFormsModule,
+        LayoutsModule,
+        AppRoutingModule
+    ]
 })
 export class AppModule { }

@@ -1,6 +1,12 @@
-main{
-  min-width:100vh - var(--header-heigth);
+ main{
+ /*  min-width:100vh - var(--header-heigth); */
   background-color: rgb(47, 192, 81);
   padding: 1rem;
   bottom: 500px;
+  min-height: calc(100vh - var(--NavBar-heigth));
 }
+
+/* main{
+
+  background-color: rgb(47, 192, 81);
+} */
