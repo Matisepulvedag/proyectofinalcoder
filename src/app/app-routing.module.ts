@@ -5,23 +5,44 @@ import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-l
 import { StudentsPageComponent } from './pages/students-page/students-page.component';
 import { CursoComponent } from './pages/curso/curso.component';
 import { InscripcionComponent } from './pages/inscripcion/inscripcion.component';
+import { CleanLayoutComponent } from './layouts/clean-layout/clean-layout.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { StudentsDetalleComponent } from './pages/students-detalle/students-detalle.component';
 
 const routes : Routes =[
   {
     path: '',
-    Component: DashboardLayoutComponent,
+    component: DashboardLayoutComponent,
     children:[
       {
-        path: "students"
-        Component: StudentsPageComponent,
+        path: "students",
+        component: StudentsPageComponent,
+      },
+      {
+        path: 'students/:id',
+        component: StudentsDetalleComponent,
       },
       {
         path: 'curso',
-        component: CursoComponent
+        component: CursoComponent,
       },
       {
         path: 'inscripcion',
         component: InscripcionComponent
+      }
+    ]
+  },
+  {
+    path:'auth',
+    component: CleanLayoutComponent,
+    children:[
+      {
+        path:'login',
+        component: LoginPageComponent,
+      },
+      {
+        path:'**',
+        redirectTo: 'login'
       }
     ]
   }

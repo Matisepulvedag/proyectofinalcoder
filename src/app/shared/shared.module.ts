@@ -7,6 +7,7 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { MyMaterialModule } from './modules/my-material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 
@@ -15,7 +16,8 @@ import { RouterModule } from '@angular/router';
     StudentDialogComponent,
     HeaderComponent,
     PageWrapperComponent,
-    SidebarComponent
+    SidebarComponent,
+    NotFoundComponent
 
   ],
   imports: [
