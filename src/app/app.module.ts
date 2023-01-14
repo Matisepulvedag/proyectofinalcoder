@@ -12,9 +12,11 @@ import { SidebarComponent } from './shared/layout/sidebar/sidebar.component'
 import { LayoutsModule } from './layouts/layouts.module';
 import { AppRoutingModule } from './app-routing.module';
 
+
 @NgModule({
     declarations: [
         AppComponent,
+
 
     ],
     providers: [],
