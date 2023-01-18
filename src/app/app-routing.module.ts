@@ -2,15 +2,28 @@ import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-layout.component';
-import { StudentsPageComponent } from './pages/students-page/students-page.component';
-import { CursoComponent } from './pages/curso/curso.component';
+import { StudentsPageComponent } from './dashboard/students/pages/students-page/students-page.component';
+import { CursoComponent } from './dashboard/courses/pages/curso/curso.component';
 import { InscripcionComponent } from './pages/inscripcion/inscripcion.component';
 import { CleanLayoutComponent } from './layouts/clean-layout/clean-layout.component';
-import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { StudentsDetalleComponent } from './pages/students-detalle/students-detalle.component';
+import { AuthGuard } from './auth/guards/guards/auth.guard';
 
 const routes : Routes =[
   {
+    path: 'dashboard',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./dashboard/dashboard.module').then((module) => module.DashboardModule)
+  },
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then((module) => module.AuthModule)
+  },
+  {
+    path: '**',
+    redirectTo: 'auth'
+  }
+ /*  {
     path: '',
     component: DashboardLayoutComponent,
     children:[
@@ -37,15 +50,11 @@ const routes : Routes =[
     component: CleanLayoutComponent,
     children:[
       {
-        path:'login',
-        component: LoginPageComponent,
-      },
-      {
         path:'**',
         redirectTo: 'login'
       }
     ]
-  }
+  } */
 ]
 
 @NgModule({

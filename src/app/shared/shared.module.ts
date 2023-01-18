@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
 import { StudentDialogComponent } from './components/student-dialog/student-dialog.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { PageWrapperComponent } from './layout/page-wrapper/page-wrapper.component';
@@ -10,6 +11,7 @@ import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { CursoDialogComponent } from './components/curso-dialog/curso-dialog.component';
 import { InscriptionDialogComponent } from './components/inscription-dialog/inscription-dialog.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 
@@ -22,6 +24,7 @@ import { InscriptionDialogComponent } from './components/inscription-dialog/insc
     SidebarComponent,
     NotFoundComponent,
     InscriptionDialogComponent,
+
 
 
   ],
@@ -37,6 +40,8 @@ import { InscriptionDialogComponent } from './components/inscription-dialog/insc
     HeaderComponent,
     PageWrapperComponent,
     SidebarComponent,
+    MatCardModule,
+    MatFormFieldModule
   ]
 })
 export class SharedModule { }

@@ -1,7 +1,7 @@
-import { Curso } from './../../models/curso.module';
+import { Curso } from '../../../../models/curso.module';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { CursoDialogComponent } from '../../shared/components/curso-dialog/curso-dialog.component';
+import { CursoDialogComponent } from '../../../../shared/components/curso-dialog/curso-dialog.component';
 
 @Component({
   selector: 'app-curso',
